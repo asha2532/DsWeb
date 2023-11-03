@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <pre>
+        #include&ltstdio.h&gt
+
+
+            void main()
+            {
+             int i,arr[20],j,no;
+             
+             printf("Enter size of array: ");
+             scanf("%d",&no);
+             printf("Enter any %d elements in array: ",no);
+             for(i=0;i<no;i++)
+             {
+              scanf("%d",&arr[i]);
+             }
+             printf("Duplicate elements are: ");
+             for(i=0; i<no; i++)
+              {
+               for(j=i+1;j<no;j++)
+               {
+               if(arr[i]==arr[j])
+               {
+               printf("%d\n",arr[i]);
+               }
+              }
+              }
+             
+            }
+            OUTPUT:
+            Enter size of array: 5
+               Enter any 5 elements in array: 1 2 2 3 4 5 
+             Duplicate elements are: 2
+    </pre>
+</body>
+
+</html>

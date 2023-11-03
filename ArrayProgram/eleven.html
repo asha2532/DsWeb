@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <pre>
+        include&ltstdio.h>&gt
+            void sort(int arr[], int size){
+                int i, j;
+                for (i = 0; i < size; i++){
+                    for (j = i+1; j < size; j++){
+                        if (arr[i] > arr[j]){
+                            int temp = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = temp;
+                        }
+                    }
+                }
+            }
+            int main(){
+                int arr[10], i, count, avail = 0;
+                for (i = 0; i < 10; i++){
+                    printf("Enter Value of position %d\n", i+1);
+                    scanf("%d", &arr[i]);
+                }
+                sort(arr, 10);
+                printf("Duplicate Values\n");
+                for (i = 0; i < 10; i++)
+                {
+                    count = 1;
+                    while (arr[i] ==  arr[i+1]){
+                        count++;
+                        i++;
+                        avail = 1;
+                    }
+                    if (count > 1){
+                        printf("%d is present %d times\n", arr[i], count);
+                    }
+                    
+                }
+                if (!avail){
+                    printf("No Duplicate Values Found");
+                }
+                return 0;
+                OUTPUT:
+                Enter Value of position 1
+1 2 2 3 4 
+Enter Value of position 2
+Enter Value of position 3
+Enter Value of position 4
+Enter Value of position 5
+Enter Value of position 6
+    </pre>
+</body>
+
+</html>
