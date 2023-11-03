@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+<body>
+    <pre>
+        #include&ltstdio.h&gt
+
+            char* strLower(char str[]){
+                int i;
+                for (i = 0; str[i] != '\0'; i++)
+                {
+                    if (str[i] >= 'A' && str[i] <= 'Z')
+                        str[i] += 32; 
+                }
+                return str;
+            }
+            
+            int main(){
+                char str[30];
+                printf("Enter a String\n");
+                gets(str);
+                printf("String Before Lowercase: %s\n", str);
+                strLower(str);
+                printf("String After Lowercase: %s\n", str);
+                return 0;
+            }
+            OUTPUT:
+            Enter a String
+              HELLLO
+              String Before Lowercase: HELLLO
+              String After Lowercase: helllo              
+    </pre>
+</body>
+</html>

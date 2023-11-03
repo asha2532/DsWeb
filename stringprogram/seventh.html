@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+<body>
+    <pre>
+        #include&ltstdio.h&gt
+            int comparestrings(char *str1,char *str2)
+            {
+                int i=0;
+                while(str1[i]==str2[i])
+                {
+                    if(str1[i]=='\0')
+                    {
+                        return 0;
+                    }
+                    i++;
+                }
+                return str1[i]-str2[i];
+            }
+            int main()
+            {
+                char str1[]="haha";
+                 char str2[]="haha";
+                 int result=comparestrings(str1,str2);
+                 if(result==0)
+                 {
+                     printf("the strings are equal \n");
+                     
+                 }
+                 else
+                 {
+                     printf("not equal");
+                 }
+                 
+                 return 0;
+            }
+            OUTPUT:
+            the strings are equal
+
+    </pre>
+</body>
+</html>
