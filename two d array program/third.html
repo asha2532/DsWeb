@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <pre>
+        #include&ltstdio.h&gt
+        #include &ltstdlib.h&gt
+ 
+            int main(void)
+            {
+                int r, c;
+                printf("Enter the number of rows: ");
+                scanf("%d", &r);
+                printf("Enter the number of columns: ");
+                scanf("%d", &c);
+                int i, j;
+                int a[r][c], b[r][c], res[r][c];
+                printf("Enter the elements of first matrix:\n");
+                for (i = 0; i < r; i++)
+                {
+                    for (j = 0; j < c; j++)
+                    {
+                        printf("[%d][%d]: ", i, j);
+                        scanf("%d", &a[i][j]);
+                    }
+                }
+                printf("Enter the elements of second matrix:\n");
+                for (i = 0; i < r; i++)
+                {
+                    for (j = 0; j < c; j++)
+                    {
+                        printf("[%d][%d]: ", i, j);
+                        scanf("%d", &b[i][j]);
+                    }
+                }
+                for (i = 0; i < r; i++)
+                {
+                    for (j = 0; j < c; j++)
+                    {
+                        res[i][j] = a[i][j] - b[i][j];
+                    }
+                }
+                printf("The result matrix is:\n");
+                for (i = 0; i < r; i++)
+                {
+                    for (j = 0; j < c; j++)
+                    {
+                        printf("%6d", res[i][j]);
+                    }
+                    printf("\n");
+                }
+            }
+            OUTPUT:
+            Enter the number of rows: 3
+Enter the number of columns: 3
+Enter the elements of first matrix:
+[0][0]: 1 
+[0][1]: 2 
+[0][2]: 3
+[1][0]: 4 
+[1][1]: 6 
+[1][2]: 7 
+[2][0]: 8 
+[2][1]: 10
+[2][2]: 11
+Enter the elements of second matrix:
+[0][0]: 12
+[0][1]: 12
+[0][2]: 13
+[1][0]: 14
+[1][1]: 15
+[1][2]: 18
+[2][0]: 19
+[2][1]: 21
+[2][2]: 22
+The result matrix is:
+   -11   -10   -10
+   -10    -9   -11
+   -11   -11   -11
+
+    </pre>
+</body>
+
+</html>

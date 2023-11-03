@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <pre>
+        #include&ltstdio.h&gt
+
+            void display(int mat[4][2]){
+                int i, j;
+                for (i = 0; i < 4; i++)
+                {
+                    for (j = 0; j < 2; j++)
+                    {
+                        printf("%d\t", mat[i][j]);
+                    }
+                    printf("\n");
+                }
+            }
+            
+            int main(){
+                int mat[4][2], i, j;
+                for (i = 0; i < 4; i++)
+                {
+                    for (j = 0; j < 2; j++)
+                    {
+                        printf("Enter Row %d Column %d Value:\t", i+1, j+1);
+                        scanf("%d", &mat[i][j]);
+                    }
+                }
+                display(mat);
+                return 0;
+            } 
+            OUTPUT:
+            Enter Row 1 Column 1 Value:	1 2 
+Enter Row 1 Column 2 Value:	Enter Row 2 Column 1 Value:	4 5 
+Enter Row 2 Column 2 Value:	Enter Row 3 Column 1 Value:	5 6 
+Enter Row 3 Column 2 Value:	Enter Row 4 Column 1 Value:	6 7 
+Enter Row 4 Column 2 Value:	1	2	
+4	5	
+5	6	
+6	7
+    </pre>
+</body>
+
+</html>

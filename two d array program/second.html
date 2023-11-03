@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+<body>
+    <pre>
+
+    #include&ltstdio.h&gt
+int main()
+{
+    int rows,coloumns,i,j;
+    int matrix1[10][10],matrix2[10][10],sum[10][10];
+    
+    printf("enter the number of rows:");
+    scanf("%d",&rows);
+
+    printf("enter the coloumns:");
+    scanf("%d",&coloumns);
+    
+    printf("enter the elements of matrix1:\n");
+    for(i=0;i<rows;i++)
+    {
+        for(j=0;j<coloumns;j++)
+        {
+            scanf("%d",&matrix1[i][j]);
+        }
+    }
+    
+    printf("eter the elements of matrix 2:\n");
+    for(i=0;i<rows;i++)
+    {
+        for(j=0;j<coloumns;j++);
+        {
+            scanf( "%d",&matrix2[i][j]);
+        }    
+    }
+    
+    for(i=0;i<rows;i++)
+    {
+        for(j=0;j<coloumns;j++)
+        {
+            sum[i][j]=matrix1[i][j]+matrix2[i][j];
+        }
+    }
+    
+    printf("sum of matrices:\n");
+    for(i=0;i<rows;i++)
+    {
+        for(j=0;j<coloumns;j++)
+        {
+            printf("%d",sum[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+</pre>
+</body>
+</html>
