@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+<body>
+    <pre>
+        
+#include <stdio.h>
+
+    int decimalToBinary(int n)
+    {
+        if (n == 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return (n % 2 + 10 *
+                    decimalToBinary(n / 2));
+        }
+    }
+    int main()
+    {
+        
+        int num;
+        printf("Enter decimal number: ");
+        scanf("%d", &num);
+        
+        printf ("%d",decimalToBinary(num));
+        return 0;
+    }
+    OUTPUT:
+    Enter decimal number: 7
+111
+    </pre>
+</body>
+</html>

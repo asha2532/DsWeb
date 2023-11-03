@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+<body>
+    <pre>
+        #include&ltstdio.h&gt
+            long int multiplyNumbers(int n);
+            int main() {
+                int n;
+                printf("Enter a positive integer: ");
+                scanf("%d",&n);
+                printf("Factorial of %d = %ld", n, multiplyNumbers(n));
+                return 0;
+            }
+            
+            long int multiplyNumbers(int n) {
+                if (n>=1)
+                    return n*multiplyNumbers(n-1);
+                else
+                    return 1;
+            }
+            OUTPUT:
+            Enter a positive integer: 5
+Factorial of 5 = 120
+    </pre>
+</body>
+</html>
